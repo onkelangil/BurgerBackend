@@ -17,13 +17,13 @@ public class ReviewResource {
     private final ReviewService reviewService;
     private final BurgerRestaurantService burgerRestaurantService;
 
-    public ReviewResource(ReviewMapper reviewMapper, ReviewService reviewService, BurgerRestaurantService burgerRestaurantService) { //todo constructure based DI
+    public ReviewResource(ReviewMapper reviewMapper, ReviewService reviewService, BurgerRestaurantService burgerRestaurantService) {
         this.reviewMapper = reviewMapper;
         this.reviewService = reviewService;
         this.burgerRestaurantService = burgerRestaurantService;
     }
 
-    @PostMapping("/v1/review") //todo: lav abstract klasse så man kan vælge hvilke methoder som skal overskrives
+    @PostMapping("/v1/review")
     public void createReview(@RequestHeader("jwt") String jwt, @RequestBody CreateReviewDto createReviewDto) {
         Review test = reviewMapper.map(createReviewDto, jwt);
         reviewService.create(test);

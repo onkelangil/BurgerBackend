@@ -9,14 +9,14 @@ import java.util.List;
 @Getter
 @Setter
 @Entity
-@Table(name = "burger_restaurant") //TODO: land, by kommune for at få mindre
+@Table(name = "burger_restaurant")
 public class BurgerRestaurant {
     @Id
     private String id;
     private String name;
     private double latitude;
     private double longitude;
-    private double score; // todo: schedual job
+    private double score;
     @OneToMany
     @JoinColumn(name = "burger_menu_id")
     private List<BurgerRestaurantMenu> burgerMenus;
@@ -39,6 +39,5 @@ public class BurgerRestaurant {
         this.score = score;
         this.burgerMenus = burgerMenus;
         this.restaurantOpeningHours = restaurantOpeningHours;
-        ;
     }
 }

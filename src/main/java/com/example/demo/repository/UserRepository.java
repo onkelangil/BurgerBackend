@@ -6,8 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import javax.transaction.Transactional;
 
-@Repository //todo overvej om det er for advance, reflection
+@Repository
 @Transactional
-public interface UserRepository extends JpaRepository<User, String> { //todo grimme quries med hibernate og quries, solid priciple
-
+public interface UserRepository extends JpaRepository<User, String> {
 }

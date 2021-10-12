@@ -12,7 +12,7 @@ import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-@Transactional //todo laver alt i din transaction læs op: tradition bank eksempel
+@Transactional
 public class BurgerRestaurantService {
     private final BurgerRestaurantRepository burgerRestaurantRepository;
     private final UserService userService;

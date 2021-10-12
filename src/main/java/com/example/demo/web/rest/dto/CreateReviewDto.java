@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class CreateReviewDto { //todo vi har ikke userId med da brugerne ville kunne skrive andre id'er på
+public class CreateReviewDto {
     private String burgerRestaurantId;
     private int tasteScore;
     private int textureScore;

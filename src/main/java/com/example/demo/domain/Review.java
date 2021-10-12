@@ -24,7 +24,7 @@ public class Review {
     private BurgerRestaurant burgerRestaurant;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private User user; //todo not null
+    private User user;
     private int tasteScore;
     private int textureScore;
     private int visualScore;
