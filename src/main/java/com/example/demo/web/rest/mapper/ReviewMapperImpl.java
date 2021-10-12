@@ -21,7 +21,7 @@ public class ReviewMapperImpl implements ReviewMapper {
         return review;
     }
 
-    private String createPictureResource(Byte picture) {
+    private String createPictureResource(byte[] picture) {
         return "/somePath.jpg";
     }
 }

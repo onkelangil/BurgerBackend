@@ -16,7 +16,6 @@ import java.util.List;
 public class BurgerRestaurantService {
     private final BurgerRestaurantRepository burgerRestaurantRepository;
     private final UserService userService;
-    private NearbyRestaurantStrategy nearbyRestaurantStrategy;
 
     public BurgerRestaurantService(BurgerRestaurantRepository burgerRestaurantRepository, UserService userService) {
         this.burgerRestaurantRepository = burgerRestaurantRepository;
@@ -30,6 +29,7 @@ public class BurgerRestaurantService {
     public List<BurgerRestaurant> findNearbyRestaurants(String userId) {
         List<BurgerRestaurant> restaurants = burgerRestaurantRepository.findAll();
         User user = userService.getUser(userId);
+        NearbyRestaurantStrategy nearbyRestaurantStrategy;
         if (user.isPremiumMember()) {
             nearbyRestaurantStrategy = new HaversineStrategy();
         } else {

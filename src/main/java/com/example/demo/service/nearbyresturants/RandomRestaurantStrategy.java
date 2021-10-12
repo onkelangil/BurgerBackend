@@ -22,7 +22,7 @@ public class RandomRestaurantStrategy implements NearbyRestaurantStrategy {
     }
 
     private BurgerRestaurant createFarAwayRestaurant(List<BurgerRestaurant> burgerRestaurants) {
-        return new BurgerRestaurant("someFakeIdForBurger2", "Faraway burger join", 42.00, 42.00, 1, createFakeBurgerMenu(), createFakeOpeningHours());
+        return new BurgerRestaurant("someFakeIdForBurger2", "Faraway burger join", 42.00, 45.00, 1, createFakeBurgerMenu(), createFakeOpeningHours());
     }
 
     private List<BurgerRestaurantMenu> createFakeBurgerMenu() {

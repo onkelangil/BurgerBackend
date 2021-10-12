@@ -16,7 +16,6 @@ public class User {
     private String id;
     private String firstName;
     private String lastName;
-
     private boolean premiumMember;
 
     public User() {
@@ -24,5 +23,10 @@ public class User {
 
     public User(String id) {
         this.id = id;
+    }
+
+    public User(String id, boolean premiumMember) {
+        this.id = id;
+        this.premiumMember = premiumMember;
     }
 }
